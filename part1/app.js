@@ -15,5 +15,6 @@ let pool;
     try{
         pool = await mysql.createPool(dbConfig);
         console.log('MySQL pool created');
-        
+
+        app.listen(port, () => {
     }
