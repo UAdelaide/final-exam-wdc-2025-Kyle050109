@@ -88,7 +88,7 @@ app.get ('/walker', (req, res) => {
 app.get ('/logout', (req, res) => {
     req.session.destroy(err => {
         if (err) {
-            console.error('logout error:', err);
+            console.error('logout error:', err);// if destoty session fails still can redirect to 
             return res.status(500).send('logout failed');
         }
         res.clearCookie ('connect.sid'); // clear session cookie
