@@ -23,9 +23,6 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-// setup view engine
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
