@@ -50,7 +50,8 @@ app.post('/login', async (req, res) => {
             } else if (users[0].role === 'walker') {
                 return res.redirect('/walker');
             }
-        }else{ res.render}
+        }else{ res.render('index', { error: 'invvalid username or password'});
+    }
         }
     }
 // Export the app instead of listening here
