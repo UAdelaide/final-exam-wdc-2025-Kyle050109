@@ -95,5 +95,7 @@ app.get ('/logout', (req, res) => {
         res.redirect('/'); // redirect to homepage
     });
 });
+
+app.get('api/')
 // Export the app instead of listening here
 module.exports = app;
