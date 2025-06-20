@@ -62,7 +62,7 @@
         // a new funciton obtain the userID from the server
         async function getCurrentUser() {
           try {
-        // req the current user info from the backend
+        // req the current user info from the backend（determine the login status from the session）
             const res = await fetch('/api/users/me');
             if (!res.ok) throw new Error ('Failed to get current user');
             const data = await res.json();
