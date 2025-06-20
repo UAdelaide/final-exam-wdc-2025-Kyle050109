@@ -116,6 +116,6 @@ app.get('/api/users/my-dogs', async (req, res) => {
         res.status(500).send('failed to fetch dogs');
     }
 }
-);
+});
 // Export the app instead of listening here
 module.exports = app;
