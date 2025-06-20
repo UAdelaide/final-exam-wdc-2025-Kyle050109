@@ -45,7 +45,9 @@
           errorMessage: '' // if any error occurs during login
         }
       },
+      // to define a method to handle the login process
       methods:{
+        // process with the login
         async handleLogin(){
           try{
             const res = await fetch('/login', {
