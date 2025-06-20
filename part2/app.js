@@ -120,7 +120,9 @@ app.get('/api/users/my-dogs', async (req, res) => {
 
 app.get('/api/users/me', (req, res) => {
     if (!req.session.user) {
-       res.json({user_id: req.session.user.user.id})
+       res.json({user_id: req.session.user.user_id});
+    }else{
+        
     }
 }
 // Export the app instead of listening here
