@@ -50,17 +50,17 @@ app.get('/', (req, res) => {
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     try {
-        // query the database to check if the user exists and 
+        // query the database to check if the user exists and password matches
         const [users] = await pool.query(
             'SELECT * FROM Users WHERE username = ? AND password_hash = ?',
             [username, password]
         );
         if (users.length === 1){
-            req.session.user = users[0];
+            req.session.user = users[0]; // store user info in session
             if(users[0].role === 'owner'){
-              return res.redirect('/owner');
+              return res.redirect('/owner');// redirect to owner dashboard if user is owner
             } else if (users[0].role === 'walker') {
-              return res.redirect('/walker');
+              return res.redirect('/walker');// 
             }
         }else{ return res.status(401).send("invalid username or password");
     }
