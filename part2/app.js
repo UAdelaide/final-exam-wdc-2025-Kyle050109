@@ -65,7 +65,7 @@ app.get ('/walker', (req, res) => {
     if (!req.session.user || req.session.user.role !== 'walker'){
         return res.redirect('/');
     }
-    res.send('Walker Dashboard');
+    res.sendFile(path.join(__dirname, 'public', 'walker.html'));
 });
 
 
