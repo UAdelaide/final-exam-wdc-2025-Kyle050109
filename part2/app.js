@@ -31,12 +31,12 @@ app.locals.pool = pool;
 app.use(session({
     secret:'secretkey', // session key encryption
     resave: false,     // do not save session if unmodified
-    saveUninitialized: true // 
+    saveUninitialized: true // initialize session even if not modified
 }));
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-
+// make 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
