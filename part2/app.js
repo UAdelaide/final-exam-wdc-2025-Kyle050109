@@ -45,7 +45,10 @@ app.post('/login', async (req, res) => {
         );
         if (users.length === 1){
             req.session.user = users[0];
-            if(users[0].role === 'owner')
+            if(users[0].role === 'owner'){
+                return res.redirect('/owner');
+            } else if (users[0].role === 'walker') {
+            }
         }
     }
 // Export the app instead of listening here
