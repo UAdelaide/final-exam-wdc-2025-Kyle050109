@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 const app = express();
-const
+const mysql = require('mysql2/promise');
+const 
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
