@@ -60,6 +60,10 @@ app.post('/login', async (req, res) => {
 app.get ('/owner', (req, res) => {
     if (!req.session.user || req.session.user.role !== 'owner') {
         return res.redirect('/');
- 
+        res.send ('Owner Dashboard');
+    });
+
+    
+
 // Export the app instead of listening here
 module.exports = app;
