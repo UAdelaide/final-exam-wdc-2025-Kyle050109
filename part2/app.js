@@ -119,7 +119,9 @@ app.get('/api/users/my-dogs', async (req, res) => {
 );
 
 app.get('/api/users/me', (req, res) => {
-    
+    if (!req.session.user) {
+       res.json 
+    }
 }
 // Export the app instead of listening here
 module.exports = app;
