@@ -52,7 +52,7 @@ app.post('/login', async (req, res) => {
         }else{ return res.status(401).send("invalid username or password");
     }catch (err){
             console.error(err);
-           
+           return res.status(500).send 
     }
 });
 app.get ('/owner', (req, res) => {
