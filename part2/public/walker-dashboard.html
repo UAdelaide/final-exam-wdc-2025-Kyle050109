@@ -64,6 +64,7 @@
           try {
         // req the current user info from the backend（determine the login status from the session）
             const res = await fetch('/api/users/me');
+        //
             if (!res.ok) throw new Error ('Failed to get current user');
             const data = await res.json();
             walkerId.value = data.user_id;
