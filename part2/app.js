@@ -118,7 +118,7 @@ app.get('/api/users/my-dogs', async (req, res) => {
 }
 );
 
-// define a GET route/api/users/metoobatin the user_id of the currently logged-in user (return JSON)
+// define a GETroute/api/users/me to obatin the userid of the currently logged-in user (return JSON)
 app.get('/api/users/me', (req, res) => {
     if (!req.session.user) {
        res.json({user_id: req.session.user.user_id});
