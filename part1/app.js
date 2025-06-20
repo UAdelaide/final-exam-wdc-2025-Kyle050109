@@ -34,4 +34,7 @@ app.get('/api/dogs', async (req, res) => {
         );
         res.json(rows);
     }catch (error) {
-        console.error(`Error in /api/dogs:', error`)
+        console.error(`Error in /api/dogs:', error);
+        `
+
+        )
