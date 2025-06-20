@@ -12,4 +12,7 @@ const dbConfig = {
 
 let pool;
 (async () => {
-    
+    try{
+        pool = await mysql.createPool(dbConfig);
+        
+    }
