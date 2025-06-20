@@ -27,7 +27,7 @@ app.locals.pool = pool;
     }
 }
 )();
-// setup
+// setup session
 app.use(session({
     secret:'secretkey',
     resave: false,
