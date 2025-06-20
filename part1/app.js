@@ -44,5 +44,6 @@ app.get('/api/walkrequests/open', async (req, res) => {
         const[rows] = await pool.query(`
             SELECT wr.request_id, d.name AS dog_name, wr.requested_time,
             wr.duration_minutes, wr.location, u.username AS owner_username
-            FROM WalkRequest`
+            FROM WalkRequests wr
+            JOIN Dogs d ON wr.dog_id = d.dog_`
     }
