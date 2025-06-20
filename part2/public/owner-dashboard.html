@@ -35,6 +35,7 @@
         <!--form that user can select their own dogs-->
           <div class="mb-3">
             <label class="form-label">Select Your Dog</label>
+            <!---->
             <select v-model="form.dog_id" class="form-select" required>
               <option disabled  value="">-- Choose a Dog --</option>
               <option v-for="dog in dogs" :key="dog.id" :value = "dog.dog_id">
