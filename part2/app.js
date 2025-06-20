@@ -21,7 +21,7 @@ app.locals.pool = pool;
 (async () => {
     try {
         const[rows] = await pool.query('SELECT 1');
-        console.log("susscess")
+        console.log('susscess', rows
     }
 // setup
 app.use(session({
