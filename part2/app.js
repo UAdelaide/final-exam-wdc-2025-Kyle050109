@@ -99,7 +99,10 @@ app.get ('/logout', (req, res) => {
 app.get('/api/users/my-dogs', async (req, res) => {
     const user = req.session.user;
     if (!user) {
-        return 
+        return res.status(401).send('Unauthorized');
+    }
+    try {
+        const 
     }
 // Export the app instead of listening here
 module.exports = app;
