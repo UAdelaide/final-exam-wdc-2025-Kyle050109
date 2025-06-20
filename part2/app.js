@@ -52,7 +52,8 @@ app.post('/login', async (req, res) => {
             }
         }else{ res.render('index', { error: 'invvalid username or password'});
     }
-        }
+        }catch (error) {
+            console.error(err)
     }
 // Export the app instead of listening here
 module.exports = app;
