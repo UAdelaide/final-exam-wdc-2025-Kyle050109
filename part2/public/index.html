@@ -60,8 +60,11 @@
             });
             if(res.redirected){
               window.location.href = res.url;
-              
+            } else {
+              const text = await res.text();
+              this.errorMessage = test;
             }
+            
           }
         }
       }
