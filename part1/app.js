@@ -17,4 +17,6 @@ let pool;
         console.log('MySQL pool created');
 
         app.listen(port, () => {
+            console.log(`Server running at http://localhost:${port}`);
+        }
     }
