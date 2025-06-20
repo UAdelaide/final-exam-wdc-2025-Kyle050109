@@ -103,7 +103,7 @@ app.get('/api/users/my-dogs', async (req, res) => {
     }
     try {
         const [rows] = await pool.query(
-            SELECT
+            'SELECT dog_id, name FROM'
         )
     }
 // Export the app instead of listening here
