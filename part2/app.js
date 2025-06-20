@@ -69,13 +69,14 @@ app.post('/login', async (req, res) => {
            return res.status(500).send ("server error");
     }
 });
-// GET/owner and to owner page 
+// GET/owner and to owner page (only if login and user is owner)
 app.get ('/owner', (req, res) => {
     if (!req.session.user || req.session.user.role !== 'owner') {
         return res.redirect('/');
     }
     res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
 });
+// GET/walker and to walker page (only if login and user is walker)
 app.get ('/walker', (req, res) => {
     if (!req.session.user || req.session.user.role !== 'walker'){
         return res.redirect('/');
