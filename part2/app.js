@@ -118,6 +118,7 @@ app.get('/api/users/my-dogs', async (req, res) => {
 }
 );
 
+// obatin the user_id of the currently logged-in user (return JSOn)
 app.get('/api/users/me', (req, res) => {
     if (!req.session.user) {
        res.json({user_id: req.session.user.user_id});
