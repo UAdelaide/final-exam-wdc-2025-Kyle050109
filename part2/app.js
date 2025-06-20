@@ -63,7 +63,8 @@ app.get ('/owner', (req, res) => {
         res.send ('Owner Dashboard');
     });
 app.get ('/walker', (req, res) => {
-    if 
+    if (!req,session.user || req.session.user.role !== 'walker')
+        return res.redirect('/');
 
 
 // Export the app instead of listening here
