@@ -104,6 +104,7 @@ app.get('/api/users/my-dogs', async (req, res) => {
     try {
         const [rows] = await pool.query(
             'SELECT dog_id, name FROM Dogs WHERE owner_id = ?',
+            [user.id]
         )
     }
 // Export the app instead of listening here
