@@ -117,6 +117,7 @@
         async function loadDogs(){
           try{
             // initialize a GET request to the server and request path is /api/users/my-dogs
+            // this API will return the info dog_i
             const res = await fetch('/api/users/my-dogs');
             dogs.value = await res.json();
           } catch (err) {
