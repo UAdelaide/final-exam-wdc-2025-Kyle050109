@@ -52,7 +52,7 @@ app.post('/login', async (req, res) => {
             }
         }else{ res.render('index', { error: 'invalid username or password'});
     }
-        }catch (error){
+        }catch (err){
             console.error(err);
             res.render('index', { error: 'server error' });
     }
