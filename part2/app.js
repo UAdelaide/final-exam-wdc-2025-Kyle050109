@@ -49,7 +49,7 @@ app.post('/login', async (req, res) => {
               return res.redirect('/owner');
             } else if (users[0].role === 'walker'){
               return res.redirect('/walker');
-            }
+        
         }else{ res.render('index', { error: 'invvalid username or password'});
     }
         }catch (error){
