@@ -72,7 +72,11 @@
       // to define a method to handle the login process
       methods:{
         async loadDogs(){
-          
+          try{
+            const res = await fetch('/api/dogs');
+            const dogList = await res.json();
+            for (let dog of dogList) {
+          }
         }
         // process with the login
         async handleLogin(){
