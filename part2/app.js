@@ -118,6 +118,6 @@ app.get('/api/users/my-dogs', async (req, res) => {
 }
 );
 
-app.get('/api/user/me ')
+app.get('/api/users/me))
 // Export the app instead of listening here
 module.exports = app;
