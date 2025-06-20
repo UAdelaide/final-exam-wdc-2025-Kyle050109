@@ -65,10 +65,11 @@ app.post('/login', async (req, res) => {
         }else{ return res.status(401).send("invalid username or password");
     }
         } catch (err){
-            console.error(err);// catch an error 
+            console.error(err);// catch an error
            return res.status(500).send ("server error");
     }
 });
+// GET/owner and to owner page 
 app.get ('/owner', (req, res) => {
     if (!req.session.user || req.session.user.role !== 'owner') {
         return res.redirect('/');
