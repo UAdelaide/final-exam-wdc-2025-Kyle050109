@@ -105,7 +105,7 @@ app.get('/api/users/my-dogs', async (req, res) => {
         return res.status(401).send('Unauthorized');
     }
     try {
-        // query 
+        // query the database to get the name and id of the dog 
         const [rows] = await pool.query(
             'SELECT dog_id, name FROM Dogs WHERE owner_id = ?',
             [user.id]
