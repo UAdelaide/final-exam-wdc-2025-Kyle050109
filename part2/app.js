@@ -33,8 +33,8 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-// homepage login (using a new ejs file so get /login)
-app.get('/login', (req, res) => {
+// homepage login
+app.get('/', (req, res) => {
     res.render('index', { error: null });
 });
 // to handle loginpost
