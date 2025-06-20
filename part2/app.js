@@ -130,7 +130,7 @@ app.get('/api/users/me', (req, res) => {
     }
 });
 
-// new /api/dogs
+// new /api/dogs route from part1/app.js
 app.get('/api/dogs', async (req, res) => {
     try {
         const[rows] = await pool.query(
