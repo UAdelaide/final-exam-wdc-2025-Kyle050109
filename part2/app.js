@@ -89,7 +89,7 @@ app.get ('/logout', (req, res) => {
     req.session.destroy(err => {
         if (err) {
             console.error('logout error:', err);
-            return res.status(500).send('Internal Server Error');
+            return res.status(500).send('logout failed');
         }
         res.clearCookie ('connect.sid'); // clear session cookie
         res.redirect('/'); // redirect to homepage
