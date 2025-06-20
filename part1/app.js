@@ -18,5 +18,6 @@ let pool;
 
         app.listen(port, () => {
             console.log(`Server running at http://localhost:${port}`);
-        }
-    }
+        });
+    } catch (error) {
+        console.error(`Failed to initialze `)
