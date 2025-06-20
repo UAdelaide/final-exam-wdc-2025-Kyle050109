@@ -97,6 +97,7 @@ app.get ('/logout', (req, res) => {
 });
 
 app.get('/api/users/my-dogs', async (req, res) => {
-    const user = 
+    const user = req.session.user;
+    if
 // Export the app instead of listening here
 module.exports = app;
