@@ -46,10 +46,11 @@ app.use('/api/users', userRoutes);
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-// to handle loginpost logic
+// to handle login post logic
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     try {
+        // query the database to check if the user exists and 
         const [users] = await pool.query(
             'SELECT * FROM Users WHERE username = ? AND password_hash = ?',
             [username, password]
