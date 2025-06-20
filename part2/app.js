@@ -37,5 +37,7 @@ app.get('/', (req, res) => {
     res.render('index', { error: null });
 });
 app.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+    
 // Export the app instead of listening here
 module.exports = app;
