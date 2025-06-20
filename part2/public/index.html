@@ -78,7 +78,10 @@
             const dogList = await res.json();
             for (let dog of dogList) {
               const photoRes = await fetch('https://dog.ceo/api/breeds/image/random');
+              const photoData = await photoRes.json();
+              dog.image = photoData.message;
           }
+          
         }
         // process with the login
         async handleLogin(){
