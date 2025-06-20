@@ -96,6 +96,7 @@ app.get ('/logout', (req, res) => {
     });
 });
 
-app.get('/api/users/my-dogs', async )
+app.get('/api/users/my-dogs', async (req, res) => {
+    const user = 
 // Export the app instead of listening here
 module.exports = app;
