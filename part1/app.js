@@ -66,5 +66,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             JOIN WalkApplications wa ON wr.request_id = wa.request_id
             WHERE wa.walker_id = u.user_id AND wr.status = 'completed') AS completed_walks
             FROM Users u
-            LEFT JOIN 
+            LEFT JOIN WalkRatings r ON u.user_id = r.walker_id
+            WHERE u.role = 'walker'
+            
     }
