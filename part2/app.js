@@ -11,8 +11,11 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({ extended: true }));
 // setup
 app.use(session({
-    secret:'secretkey'
-}))
+    secret:'secretkey',
+    resave: false,
+    saveUninitialized: true,
+}));
+app.set('view engine', 'ejs');
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
