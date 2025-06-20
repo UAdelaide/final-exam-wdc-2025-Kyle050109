@@ -33,10 +33,11 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-// homepage
+// homepage login
 app.get('/', (req, res) => {
     res.render('index', { error: null });
 });
+// to handle loginpost
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     try {
