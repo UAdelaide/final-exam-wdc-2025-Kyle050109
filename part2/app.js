@@ -43,7 +43,9 @@ app.post('/login', async (req, res) => {
             'SELECT * FROM Users WHERE username = ? AND password_hash = ?',
             [username, password]
         );
-        
+        if (users.length === 1){
+            req
+        }
     }
 // Export the app instead of listening here
 module.exports = app;
