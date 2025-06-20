@@ -54,10 +54,9 @@
                     const data = await res.json();
                     this.dogImage = data.message;
                 } catch (e) {
-                    this.dogImage = 
+                    this.dogImage = '';
                 }
                 }
             }
-        }
-    })
+    }).mount()
 </script>
