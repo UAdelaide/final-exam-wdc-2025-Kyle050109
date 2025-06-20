@@ -62,8 +62,9 @@ app.get ('/owner', (req, res) => {
         return res.redirect('/');
         res.send ('Owner Dashboard');
     });
+app.get ('/walker', (req, res) => {
+    if 
 
-    
 
 // Export the app instead of listening here
 module.exports = app;
