@@ -84,7 +84,6 @@ app.get ('/walker', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
 });
 
-
-
+app.get 
 // Export the app instead of listening here
 module.exports = app;
