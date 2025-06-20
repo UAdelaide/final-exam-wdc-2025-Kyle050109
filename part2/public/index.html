@@ -47,7 +47,11 @@
       },
       methods:{
         asyne handleLogin(){
-          try
+          try{
+            const res = await fetch('/login', {
+              method
+            })
+          }
         }
       }
     }).mount('#app');
