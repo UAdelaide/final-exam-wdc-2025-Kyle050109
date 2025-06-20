@@ -44,7 +44,8 @@ app.post('/login', async (req, res) => {
             [username, password]
         );
         if (users.length === 1){
-            req
+            req.session.user = users[0];
+            if(users[0].role === 'owner')
         }
     }
 // Export the app instead of listening here
