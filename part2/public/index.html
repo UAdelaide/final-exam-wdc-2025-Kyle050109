@@ -43,10 +43,10 @@
           username: '', // store the username inpu
           password: '', // store the password input
           errorMessage: '' // if any error occurs during login
-        };
+        }
       },
       methods:{
-        asyne handleLogin(){
+        async handleLogin(){
           try{
             const res = await fetch('/login', {
               method: 'POST',
