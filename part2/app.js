@@ -96,8 +96,9 @@ app.get ('/logout', (req, res) => {
     });
 });
 
-// define a GET route to get 
+// define a GET route to get the list of dogs for the logged-in user
 app.get('/api/users/my-dogs', async (req, res) => {
+    // get user info from session
     const user = req.session.user;
     if (!user) {
         return res.status(401).send('Unauthorized');
