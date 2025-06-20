@@ -33,10 +33,10 @@ app.use(session({
     resave: false,     // do not save session if unmodified
     saveUninitialized: true // initialize session even if not modified
 }));
-// Routes
+// Routes loaded
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-// make 
+// make the routes available to the app
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
