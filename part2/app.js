@@ -21,8 +21,12 @@ app.locals.pool = pool;
 (async () => {
     try {
         const[rows] = await pool.query('SELECT 1');
-        console.log('susscess', rows
+        console.log('susscess', rows);
+    } catch (error) {
+        console.error('Database connection error:', error.message);
     }
+}
+)();
 // setup
 app.use(session({
     secret:'secretkey',
