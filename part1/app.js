@@ -23,3 +23,6 @@ let pool;
         console.error('Failed to initialze server:', err.message);
     }
 })();
+
+
+app.get('/api/dogs', async (req, res) => {
