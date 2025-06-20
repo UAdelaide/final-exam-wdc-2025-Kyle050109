@@ -116,6 +116,7 @@
         // add an async function to load dogs of the users
         async function loadDogs(){
           try{
+            // initialize the dogs array by fetching the data from the API
             const res = await fetch('/api/users/my-dogs');
             dogs.value = await res.json();
           } catch (err) {
