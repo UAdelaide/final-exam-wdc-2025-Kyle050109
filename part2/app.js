@@ -61,11 +61,11 @@ app.post('/login', async (req, res) => {
               return res.redirect('/owner');// redirect to owner dashboard if user is owner
             } else if (users[0].role === 'walker') {
               return res.redirect('/walker');// redirect to walker dashboard if user is walker
-            }
+            }// login error
         }else{ return res.status(401).send("invalid username or password");
     }
         } catch (err){
-            console.error(err);// login error 
+            console.error(err);// catch an error 
            return res.status(500).send ("server error");
     }
 });
