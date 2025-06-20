@@ -40,8 +40,10 @@ app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     try {
         const [users] = await pool.query(
-            'SELECT * FROM Users WHERE username ='
-        )
+            'SELECT * FROM Users WHERE username = ? AND password_hash = ?',
+            [username, password]
+        );
+        
     }
 // Export the app instead of listening here
 module.exports = app;
