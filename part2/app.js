@@ -4,6 +4,7 @@ require('dotenv').config();
 const app = express();
 const mysql = require('mysql2/promise');
 const session = require('express-session');
+const PORT = process.env.PORT || 8080;
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
