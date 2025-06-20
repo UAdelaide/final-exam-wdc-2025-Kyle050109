@@ -42,11 +42,11 @@ app.use('/api/users', userRoutes);
 
 // homepage login setting
 
-// 
+// GET to show login page and serve index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-// to handle loginpost
+// to handle loginpost logic
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     try {
