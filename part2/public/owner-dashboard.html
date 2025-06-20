@@ -119,6 +119,7 @@
             // initialize a GET request to the server and request path is /api/users/my-dogs
             // this API will return the info dog_id and name of all the dogs own by the logged-in owner
             const res = await fetch('/api/users/my-dogs');
+            // convert the response to JSON and assign it to dogs
             dogs.value = await res.json();
           } catch (err) {
             error.value = 'failed to load your dogs';
