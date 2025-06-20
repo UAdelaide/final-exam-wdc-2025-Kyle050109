@@ -58,7 +58,10 @@
                 'password': this.password
               })
             });
-            
+            if(res.redirected){
+              window.location.href = res.url;
+              
+            }
           }
         }
       }
