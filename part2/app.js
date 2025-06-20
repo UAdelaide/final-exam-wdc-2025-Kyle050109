@@ -15,7 +15,7 @@ const pool= mysql.createPool({
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASS || '',
     database: process.env.DB_NAME || 'DogWalkService'});
-
+// expose db pool
 app.locals.pool = pool;
 // setup
 app.use(session({
@@ -23,6 +23,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+// setup view engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 // Routes
