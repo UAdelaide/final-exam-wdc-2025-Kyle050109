@@ -108,6 +108,7 @@ app.get('/api/users/my-dogs', async (req, res) => {
         );
         res.json(rows);
     } catch (error) {
+        console.
         )
     }
 // Export the app instead of listening here
