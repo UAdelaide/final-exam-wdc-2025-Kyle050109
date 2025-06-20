@@ -19,6 +19,9 @@ const pool= mysql.createPool({
 app.locals.pool = pool;
 // database test
 (async () => {
+    try {
+        const[rows] = await 
+    }
 // setup
 app.use(session({
     secret:'secretkey',
