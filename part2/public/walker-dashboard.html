@@ -68,8 +68,10 @@
             if (!res.ok) throw new Error ('Failed to get current user');
         // parse the JSON data to obatin the user_id
             const data = await res.json();
+        // store the returned user_id in the reactive walkerId variable
             walkerId.value = data.user_id;
           } catch (err) {
+        // if 
             error.value = 'could not load user ID';
           }
         }
