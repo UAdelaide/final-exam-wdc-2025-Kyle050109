@@ -32,6 +32,9 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-
+// homepage
+app.get('/', (req, res) => {
+    res.render('index', { title: 'Dog Walk Service' });
+});
 // Export the app instead of listening here
 module.exports = app;
