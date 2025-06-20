@@ -100,10 +100,12 @@ app.get ('/logout', (req, res) => {
 app.get('/api/users/my-dogs', async (req, res) => {
     // get user info from session
     const user = req.session.user;
+    // if user not logging in or not an owner then return unauthorized
     if (!user) {
         return res.status(401).send('Unauthorized');
     }
     try {
+        // query 
         const [rows] = await pool.query(
             'SELECT dog_id, name FROM Dogs WHERE owner_id = ?',
             [user.id]
