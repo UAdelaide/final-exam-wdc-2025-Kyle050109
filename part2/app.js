@@ -20,7 +20,8 @@ app.locals.pool = pool;
 // database test
 (async () => {
     try {
-        const[rows] = await 
+        const[rows] = await pool.query('SELECT 1');
+        console.log("susscess")
     }
 // setup
 app.use(session({
