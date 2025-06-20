@@ -59,7 +59,7 @@ app.get ('/owner', (req, res) => {
     if (!req.session.user || req.session.user.role !== 'owner') {
         return res.redirect('/');
     }
-    res.send ('Owner Dashboard');
+    res.sendFile(path.join)
 });
 app.get ('/walker', (req, res) => {
     if (!req.session.user || req.session.user.role !== 'walker'){
