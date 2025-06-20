@@ -48,7 +48,7 @@
         const message = ref('');
         const error = ref('');
         // const user = 3;
-        const walkerId = ref(null);
+        const walkerId = ref(null);// add a new variable to store walker ID
 
         async function loadWalkRequests() {
           try {
@@ -59,7 +59,7 @@
             error.value = err.message;
           }
         }
-
+        
         async function applyToWalk(requestId) {
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
