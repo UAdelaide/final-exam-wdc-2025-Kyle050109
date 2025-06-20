@@ -55,12 +55,12 @@
               method: 'POST',
               headers:{
                 'Content-Type': 'application/x-www-form-urlencoded'// table form
-              },// let username and password be into URL form 
+              },// let username and password be into URL form format
               body: new URLSearchParams({
                 'username': this.username,
                 'password': this.password
               })
-            });
+            });// if server return a redirect then redirect to the URL and means 
             if(res.redirected){
               window.location.href = res.url;
             } else {
