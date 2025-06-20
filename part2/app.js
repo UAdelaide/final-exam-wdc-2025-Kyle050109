@@ -69,7 +69,7 @@ app.get ('/walker', (req, res) => {
     if (!req.session.user || req.session.user.role !== 'walker')
         return res.redirect('/');
     }
-    res.send ('Walker Dashboard');
+    res.send('Walker Dashboard');
 });
 
 
