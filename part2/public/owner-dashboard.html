@@ -37,7 +37,7 @@
             <label class="form-label">Select Your Dog</label>
             <!--the drop-down menu and bound to form.dog_id and represents the dogID selected in the walk request-->
             <select v-model="form.dog_id" class="form-select" required>
-              
+              <!--default option-->
               <option disabled  value="">-- Choose a Dog --</option>
               <option v-for="dog in dogs" :key="dog.id" :value = "dog.dog_id">
               {{ dog.name }}
