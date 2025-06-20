@@ -134,9 +134,8 @@ app.get('/api/users/me', (req, res) => {
 app.get('/api/dogs', async (req, res) => {
     try {
         const[rows] = await pool.query(
-            `SELECT d.dog_id,d.name, d.size, u.username AS owner_username
-            FROM Dogs d
-            JOIN Users u ON d.owner_id = u.user_id;`
+            `SELECT d.dog_id,d.name, d.size, d.owner_id
+            FROM Dogs d'
         );
         res.json(rows);
     }catch (error) {
