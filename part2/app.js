@@ -17,7 +17,7 @@ const pool= mysql.createPool({
     database: process.env.DB_NAME || 'DogWalkService'});
 // expose db pool
 app.locals.pool = pool;
-// database test
+// database test to check if the conneciton is working
 (async () => {
     try {
         const[rows] = await pool.query('SELECT 1');
