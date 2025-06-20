@@ -59,13 +59,13 @@ app.get ('/owner', (req, res) => {
     if (!req.session.user || req.session.user.role !== 'owner') {
         return res.redirect('/');
     }
-    res.sendFile(path.join(__dirname, 'public', 'owner.html'));
+    res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
 });
 app.get ('/walker', (req, res) => {
     if (!req.session.user || req.session.user.role !== 'walker'){
         return res.redirect('/');
     }
-    res.sendFile(path.join(__dirname, 'public', 'walker.html'));
+    res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
 });
 
 
