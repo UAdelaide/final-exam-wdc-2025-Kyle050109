@@ -111,7 +111,7 @@ app.get('/api/users/my-dogs', async (req, res) => {
             [user.id]// use the userid as the query parameter
         );// return the results in json to the frontend
         res.json(rows);
-    } catch (error) {
+    } catch (error) {// if fails to quert then return a 500 error
         console.error(err);
         res.status(500).send('failed to fetch dogs');
     }
