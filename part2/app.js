@@ -87,7 +87,7 @@ app.get ('/walker', (req, res) => {
 app.get ('/logout', (req, res) => {
     req.session.destroy(err => {
         res.clearCookie ('connect.sid'); // clear session cookie
-        return 
+        res
     })
 // Export the app instead of listening here
 module.exports = app;
