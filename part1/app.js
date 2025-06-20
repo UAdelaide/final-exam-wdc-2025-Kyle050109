@@ -55,3 +55,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
+
+app.get('/api/walkers/summary', async (req, res) => {
+    try{
+        const
+    }
