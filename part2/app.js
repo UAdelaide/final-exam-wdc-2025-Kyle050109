@@ -50,11 +50,9 @@ app.post('/login', async (req, res) => {
               return res.redirect('/walker');
             }
         }else{ return res.status(401).send("invalid username or password");
-            
-    }
-        }catch (err){
+    }catch (err){
             console.error(err);
-            res.render('index', { error: 'server error' });
+           
     }
 });
 app.get ('/owner', (req, res) => {
