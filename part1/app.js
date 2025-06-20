@@ -10,3 +10,6 @@ const dbConfig = {
     database: 'DogWalkService'
 };
 
+let pool;
+(async () => {
+    
