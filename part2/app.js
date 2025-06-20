@@ -29,9 +29,9 @@ app.locals.pool = pool;
 )();
 // setup session
 app.use(session({
-    secret:'secretkey',
-    resave: false,
-    saveUninitialized: true
+    secret:'secretkey', // session key encryption
+    resave: false,     // do not save session if unmodified
+    saveUninitialized: true // 
 }));
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
