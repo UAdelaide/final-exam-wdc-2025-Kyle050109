@@ -34,12 +34,13 @@
     <% if (error){ %>
     <p class="error"><%= error %></p>
     <% } %>
-    <!--login form-->
+    <!--login form submiited by POST to the /login route-->
     <form action="/login" method="POST">
         <div>
             <label>Username</label><br>
         </div>
         <div>
+            <!---->
             <label>Paswwor</label><br>
             <input type="password" name="password" required>
         </div>
