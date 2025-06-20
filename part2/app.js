@@ -123,7 +123,7 @@ app.get('/api/users/me', (req, res) => {
     // if there is logged in user in the session return the user_id and encapsulate as a JSON object
     if (!req.session.user) {
        res.json({user_id: req.session.user.user_id});
-    }else{
+    }else{// otherwise return
         res.status(401).json({error: 'Unauthorized'});
     }
 });
