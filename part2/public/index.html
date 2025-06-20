@@ -49,6 +49,7 @@
       methods:{
         // process with the login
         async handleLogin(){
+          // use fetch to send a POST request to the server about username and password
           try{
             const res = await fetch('/login', {
               method: 'POST',
