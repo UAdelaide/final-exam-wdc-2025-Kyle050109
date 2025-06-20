@@ -84,6 +84,7 @@ app.get ('/walker', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
 });
 
+// add a logout route to clear session and redirect to homepage
 app.get ('/logout', (req, res) => {
     req.session.destroy(err => {
         res.clearCookie ('connect.sid'); // clear session cookie
