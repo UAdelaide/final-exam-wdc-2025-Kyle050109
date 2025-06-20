@@ -60,10 +60,10 @@
                 'username': this.username,
                 'password': this.password
               })
-            });// if server return a redirect then redirect to the URL and means 
+            });// if server return a redirect then redirect to the URL and means login succesfully
             if(res.redirected){
               window.location.href = res.url;
-            } else {
+            } else {// otherwise read the response text and display it as an error message
               const text = await res.text();
               this.errorMessage = text;
             }
