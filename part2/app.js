@@ -47,10 +47,10 @@ app.post('/login', async (req, res) => {
             req.session.user = users[0];
             if(users[0].role === 'owner'){
               return res.redirect('/owner');
-            }else if (users[0].role === 'walker'){
+            } else if (users[0].role === 'walker') {
               return res.redirect('/walker');
             }
-        }else{ res.render('index', { error: 'invvalid username or password'});
+        }else{ res.render('index', { error: 'invalid username or password'});
     }
         }catch (error){
             console.error(err);
