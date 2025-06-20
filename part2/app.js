@@ -102,7 +102,9 @@ app.get('/api/users/my-dogs', async (req, res) => {
         return res.status(401).send('Unauthorized');
     }
     try {
-        const 
+        const [rows] = await pool.query(
+            SELECT
+        )
     }
 // Export the app instead of listening here
 module.exports = app;
