@@ -129,5 +129,20 @@ app.get('/api/users/me', (req, res) => {
         res.status(401).json({error: 'Unauthorized'});
     }
 });
+
+// 
+app.get('/api/dogs', async (req, res) => {
+    try {
+        const[rows] = await pool.query(
+            `SELECT d.name AS dog_name, d.size, u.username AS owner_username
+            FROM Dogs d
+            JOIN Users u ON d.owner_id = u.user_id;`
+        );
+        res.json(rows);
+    }catch (error) {
+        console.error('Error in /api/dogs:', error);
+        res.status(500).json({ error: 'Internal Server Error'});
+    }
+});
 // Export the app instead of listening here
 module.exports = app;
