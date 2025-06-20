@@ -64,7 +64,8 @@
           try {
             const res = await fetch('/api/users/me');
             if (!res.ok) throw new Error ('Failed to get current user');
-            const data 
+            const data = await res.json();
+            walkerId.value 
           }
 
         }
