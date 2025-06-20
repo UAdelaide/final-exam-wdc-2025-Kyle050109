@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').config();
 const app = express();
 const mysql = require('mysql2/promise');
-const 
+const session = require('express-session');
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
