@@ -64,7 +64,8 @@
               const text = await res.text();
               this.errorMessage = test;
             }
-            
+          } catch (error) {
+            this.errorMessage = 'Network error'
           }
         }
       }
