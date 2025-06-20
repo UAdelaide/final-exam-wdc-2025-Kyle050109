@@ -14,5 +14,6 @@ let pool;
 (async () => {
     try{
         pool = await mysql.createPool(dbConfig);
+        console.log('MySQL pool created');
         
     }
