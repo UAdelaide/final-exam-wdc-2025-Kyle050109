@@ -122,8 +122,8 @@ app.get('/api/users/me', (req, res) => {
     if (!req.session.user) {
        res.json({user_id: req.session.user.user_id});
     }else{
-        res.status(401).json({});
+        res.status(401).json({error: 'Unauthorized'});
     }
-}
+});
 // Export the app instead of listening here
 module.exports = app;
