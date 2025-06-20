@@ -20,4 +20,6 @@ let pool;
             console.log(`Server running at http://localhost:${port}`);
         });
     } catch (error) {
-        console.error('Failed to initialze server:')
+        console.error('Failed to initialze server:', err.message);
+    }
+})();
