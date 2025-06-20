@@ -87,7 +87,9 @@ app.get ('/walker', (req, res) => {
 // add a logout route to clear session and redirect to homepage
 app.get ('/logout', (req, res) => {
     req.session.destroy(err => {
-        
+        if (err) {
+            console.error()
+        }
         res.clearCookie ('connect.sid'); // clear session cookie
         res.redirect('/'); // redirect to homepage
     });
