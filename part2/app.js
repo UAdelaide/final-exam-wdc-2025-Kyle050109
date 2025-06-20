@@ -56,5 +56,6 @@ app.post('/login', async (req, res) => {
             console.error(err);
             res.render('index', { error: 'server error' });
     }
+}
 // Export the app instead of listening here
 module.exports = app;
