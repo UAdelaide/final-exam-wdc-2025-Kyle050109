@@ -108,8 +108,8 @@ app.get('/api/users/my-dogs', async (req, res) => {
         );
         res.json(rows);
     } catch (error) {
-        console.
-        )
+        console.error(err);
+        res.status(500).send('Server error')
     }
 // Export the app instead of listening here
 module.exports = app;
