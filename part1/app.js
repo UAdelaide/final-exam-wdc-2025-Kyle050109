@@ -32,5 +32,7 @@ app.get('/api/dogs', async (req, res) => {
             FROM Dogs d
             JOIN Users u ON d.owner_id = u.user_id;`
         );
-        res.
-    }
+        res.json(rows);
+    }catch (error) {
+        console.error(`Error in /ap
+            `)
