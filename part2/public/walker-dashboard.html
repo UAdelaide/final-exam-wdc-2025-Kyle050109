@@ -66,7 +66,7 @@
             const res = await fetch('/api/users/me');
         // check if the response is ok
             if (!res.ok) throw new Error ('Failed to get current user');
-          
+        // parse the JSON data to obatin the user_id
             const data = await res.json();
             walkerId.value = data.user_id;
           } catch (err) {
