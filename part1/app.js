@@ -36,5 +36,5 @@ app.get('/api/dogs', async (req, res) => {
     }catch (error) {
         console.error('Error in /api/dogs:', error);
         res.status(500).json({ error: 'Internal Server Error'});
-    });
-}
+    }
+});
