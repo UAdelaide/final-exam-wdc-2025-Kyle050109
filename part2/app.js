@@ -34,7 +34,8 @@ app.use('/api/users', userRoutes);
 
 // homepage
 app.get('/', (req, res) => {
-    res.render('index', { error:null });
+    res.render('index', { error: null });
 });
+
 // Export the app instead of listening here
 module.exports = app;
