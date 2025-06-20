@@ -38,6 +38,10 @@ app.get('/', (req, res) => {
 });
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
-    
+    try {
+        const [users] = await pool.query(
+            
+        )
+    }
 // Export the app instead of listening here
 module.exports = app;
