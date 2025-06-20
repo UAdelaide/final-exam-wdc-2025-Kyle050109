@@ -72,5 +72,5 @@ app.get('/api/walkers/summary', async (req, res) => {
         `);
         res.json(rows);
     } catch (error) {
-        
+        console.error('Error in /api/walkers/summary:')
     }
