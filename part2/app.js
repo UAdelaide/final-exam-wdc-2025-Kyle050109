@@ -108,8 +108,8 @@ app.get('/api/users/my-dogs', async (req, res) => {
         // query the database to get the name and id of the dog of the current user
         const [rows] = await pool.query(
             'SELECT dog_id, name FROM Dogs WHERE owner_id = ?',
-            [user.id]
-        );// return the results in json to the 
+            [user.id]// use the userid as the 
+        );// return the results in json to the frontend
         res.json(rows);
     } catch (error) {
         console.error(err);
