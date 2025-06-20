@@ -17,6 +17,8 @@ const pool= mysql.createPool({
     database: process.env.DB_NAME || 'DogWalkService'});
 // expose db pool
 app.locals.pool = pool;
+// database test
+(async () => {
 // setup
 app.use(session({
     secret:'secretkey',
