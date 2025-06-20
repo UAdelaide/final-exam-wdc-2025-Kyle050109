@@ -39,7 +39,7 @@
             <select v-model="form.dog_id" class="form-select" required>
               <!--default option and prompt user to choose one but this can not be submitted as a valid value-->
               <option disabled  value="">-- Choose a Dog --</option>
-              <!--use v-for to dynamically generate options and each dog means a -->
+              <!--use v-for to dynamically generate options and each option means a owner's dog-->
               <option v-for="dog in dogs" :key="dog.id" :value = "dog.dog_id">
               {{ dog.name }}
             </option>
