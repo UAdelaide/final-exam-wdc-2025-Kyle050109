@@ -96,6 +96,7 @@ app.get ('/logout', (req, res) => {
     });
 });
 
+// define an API endpoint to fetch user's dogs
 app.get('/api/users/my-dogs', async (req, res) => {
     const user = req.session.user;
     if (!user) {
