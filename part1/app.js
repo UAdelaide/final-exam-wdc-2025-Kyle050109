@@ -4,4 +4,4 @@ const mysql = require('mysql2/promise');
 const port = 8080;
 
 const dbConfig = {
-    host
+    host: '127.0'
