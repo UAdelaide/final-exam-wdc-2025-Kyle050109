@@ -10,7 +10,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({ extended: true }));
 
-
+const pool= mysql.createPool({
+    host: process.env.DB
 // setup
 app.use(session({
     secret:'secretkey',
