@@ -32,7 +32,7 @@ app.use('/api/users', userRoutes);
 
 // homepage login
 app.get('/', (req, res) => {
-    res.sendFile(path.join)
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 // to handle loginpost
 app.post('/login', async (req, res) => {
