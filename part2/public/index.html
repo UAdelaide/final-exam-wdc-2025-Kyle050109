@@ -115,7 +115,9 @@
         // new method to load the dogs from the server
         async loadDogs(){
           try{
+        // use fetch to get the list of dogs from the server
             const res = await fetch('/api/dogs');
+        // 
             const dogList = await res.json();
             for (let dog of dogList) {
               const photoRes = await fetch('https://dog.ceo/api/breeds/image/random');
