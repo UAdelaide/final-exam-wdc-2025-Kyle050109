@@ -110,7 +110,7 @@
           errorMessage: '', // if any error occurs during login
           dogs: [] // new store the list of dogs
         }
-      },
+      },// to define a method to handle the login process and others
       methods:{
         // new method to load the dogs from the server
         async loadDogs(){
@@ -133,7 +133,7 @@
         // error handling if the fetch fails
           console.error('Failed to load dogs:', err);
         }
-    }, 
+    },
         // process with the login
         async handleLogin(){
           // use fetch to send a POST request to the server about username and password
