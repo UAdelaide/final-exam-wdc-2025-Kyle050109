@@ -41,7 +41,7 @@ app.get('/api/dogs', async (req, res) => {
 
 // get the list of dogs with open status
 app.get('/api/walkrequests/open', async (req, res) => {
-    try{
+    try{// 
         const[rows] = await pool.query(`
             SELECT wr.request_id, d.name AS dog_name, wr.requested_time,
             wr.duration_minutes, wr.location, u.username AS owner_username
