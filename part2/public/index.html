@@ -127,8 +127,10 @@
               const photoData = await photoRes.json();
               dog.image = photoData.message;
           }
+        // set the dogs data property to the list of dogs with their photos
           this.dogs = dogList;
         } catch (err) {
+        // error handling if the fetch fails
           console.error('Failed to load dogs:', err);
         }
     },
