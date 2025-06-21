@@ -71,7 +71,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             LEFT JOIN WalkRatings r ON u.user_id = r.walker_id
             WHERE u.role = 'walker'
             GROUP BY u.user_id
-        `);
+        `);// send the result as JSON
         res.json(rows);
     } catch (error) {
         console.error('Error in /api/walkers/summary:', error);
