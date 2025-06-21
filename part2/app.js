@@ -133,6 +133,7 @@ app.get('/api/users/me', (req, res) => {
 // new /api/dogs route from part1/app.js (did any modification)
 app.get('/api/dogs', async (req, res) => {
     try {
+        // 
         const[rows] = await pool.query(
             `SELECT d.dog_id,d.name, d.size, d.owner_id
             FROM Dogs d`
