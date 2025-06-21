@@ -117,7 +117,7 @@
           try{
         // use fetch to get the list of dogs from the server
             const res = await fetch('/api/dogs');
-        // 
+        // make returned data into JSON format
             const dogList = await res.json();
             for (let dog of dogList) {
               const photoRes = await fetch('https://dog.ceo/api/breeds/image/random');
