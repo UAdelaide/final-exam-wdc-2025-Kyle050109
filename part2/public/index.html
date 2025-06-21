@@ -119,8 +119,11 @@
             const res = await fetch('/api/dogs');
         // make returned data into JSON format
             const dogList = await res.json();
+        // for each dog in the list fetch a random photo from the dog API
             for (let dog of dogList) {
+        // fetch a random dog photo from the dog API
               const photoRes = await fetch('https://dog.ceo/api/breeds/image/random');
+        // 
               const photoData = await photoRes.json();
               dog.image = photoData.message;
           }
