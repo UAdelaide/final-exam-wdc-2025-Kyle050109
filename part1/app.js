@@ -26,12 +26,12 @@ let pool;
 
 // obtain all the info of the dogs with their owners
 app.get('/api/dogs', async (req, res) => {
-    try {
+    try {// query the database to get all dogs and their owners
         const[rows] = await pool.query(
             `SELECT d.name AS dog_name, d.size, u.username AS owner_username
             FROM Dogs d
             JOIN Users u ON d.owner_id = u.user_id;`
-        );
+        );// send the result as JSON
         res.json(rows);
     }catch (error) {
         console.error('Error in /api/dogs:', error);
@@ -39,6 +39,7 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
+// 
 app.get('/api/walkrequests/open', async (req, res) => {
     try{
         const[rows] = await pool.query(`
