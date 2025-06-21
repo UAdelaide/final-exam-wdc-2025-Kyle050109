@@ -73,11 +73,11 @@
     createApp({
         data(){
             return {
-                dogImage: ''
+                dogImage: ''// store the dog image URL
             };
             },
             mounted(){
-                this.getDog();
+                this.getDog();// call the to get a dog image when the component is mounted
             },
         methods:{
             // the mothdos of getting a dog image
