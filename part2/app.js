@@ -141,6 +141,7 @@ app.get('/api/dogs', async (req, res) => {
     // return the results in json format
         res.json(rows);
     }catch (error) {
+        // error handling
         console.error('Error in /api/dogs:', error);
         res.status(500).json({ error: 'Internal Server Error'});
     }
