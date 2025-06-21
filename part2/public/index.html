@@ -123,7 +123,7 @@
             for (let dog of dogList) {
         // fetch a random dog photo from the dog API
               const photoRes = await fetch('https://dog.ceo/api/breeds/image/random');
-        // 
+        // parse the JSON data from the response
               const photoData = await photoRes.json();
               dog.image = photoData.message;
           }
