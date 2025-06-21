@@ -39,7 +39,7 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
-// 
+// get the list of dogs with 
 app.get('/api/walkrequests/open', async (req, res) => {
     try{
         const[rows] = await pool.query(`
