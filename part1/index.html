@@ -77,7 +77,7 @@
             };
             },
             mounted(){
-                this.getDog();// call the to get a dog image when the component is mounted
+                this.getDog();// get a dog image when the component is mounted
             },
         methods:{
             // the mothdos of getting a dog image
@@ -87,7 +87,7 @@
                     const data = await res.json();
                     this.dogImage = data.message;
                 } catch (e) {
-                    this.dogImage = '';
+                    this.dogImage = '';// if there is an error set the dog image to empty
                 }
                 }
             }
