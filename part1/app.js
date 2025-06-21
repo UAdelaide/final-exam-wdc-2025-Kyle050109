@@ -24,7 +24,7 @@ let pool;
     }
 })();
 
-
+// obtain all the info of the dogs with their owners
 app.get('/api/dogs', async (req, res) => {
     try {
         const[rows] = await pool.query(
