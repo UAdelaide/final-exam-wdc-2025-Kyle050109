@@ -133,11 +133,12 @@ app.get('/api/users/me', (req, res) => {
 // new /api/dogs route from part1/app.js (did any modification)
 app.get('/api/dogs', async (req, res) => {
     try {
-        // user await async to query the dogs table in the database and 
+        // user await async to query the dogs table in the database and obtain the info
         const[rows] = await pool.query(
             `SELECT d.dog_id,d.name, d.size, d.owner_id
             FROM Dogs d`
         );
+    // return the results in json format
         res.json(rows);
     }catch (error) {
         console.error('Error in /api/dogs:', error);
